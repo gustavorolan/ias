@@ -14,9 +14,9 @@ provider "aws" {
 }
 
 resource "aws_instance" "app-server" {
-  ami           = "ami-095413544ce52437d"
+  ami           = "ami-00874d747dde814fa"
   instance_type = "t2.micro"
-  key_name      = "oficial"
+  key_name      = "key"
   #  user_data     = <<-EOF
   #   #!/bin/bash
   #  cd home/ubuntu
@@ -24,6 +24,6 @@ resource "aws_instance" "app-server" {
   #nohup busybox httpd -f -p 8080 &
   #EOF
   tags = {
-    Name = "Teste aws 2"
+    Name = "terraform ansible python"
   }
 }
